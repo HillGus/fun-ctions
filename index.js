@@ -11,6 +11,7 @@ function getBody(req, callback) {
 }
 
 http.createServer((req, res) => {
+	console.log(req);
 	if (req.url === '/')
 		fs.readFile('index.html', (err, html) => res.end(html));
 	else if (req.url.startsWith('/function')) {
