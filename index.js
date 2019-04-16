@@ -9,7 +9,7 @@ function getBody(req, callback) {
 	req.on('data', (data) => body += data);
 	req.on('end', () => callback(body));
 }
-
+console.log('opa');
 http.createServer((req, res) => {
 	console.log(req);
 	if (req.url === '/')
